@@ -53,3 +53,10 @@ h1 {
 h1 p {
   font-size: 15px;
 }
+h3 {
+  color: #000;
+  text-decoration: none;
+}
+h3:hover {
+  text-decoration: underline;
+}
