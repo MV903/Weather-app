@@ -1,0 +1,55 @@
+.container {
+  display: block;
+  margin: 40px auto;
+  border: 1px solid;
+  border-radius: 4px;
+  width: 50%;
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+.app {
+  padding: 10px 40px;
+}
+.search {
+  margin: 30px;
+  width: 50%;
+}
+.btn-primary {
+  background-color: #ffff;
+  color: #000;
+  border-color: #000;
+}
+.btn-primary:hover {
+  background-color: rgb(255, 236, 199);
+  color: #000;
+  border-color: #000;
+}
+.temp {
+  text-align: right;
+}
+.specs {
+  text-align: left;
+}
+.city {
+  text-align: right;
+}
+.col-2 {
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+}
+.fas {
+  font-size: 40px;
+}
+.units {
+  font-size: 15px;
+}
+a:link {
+  font-size: 15px;
+  text-decoration: none;
+}
+h1 {
+  font-size: 60px;
+}
+h1 p {
+  font-size: 15px;
+}

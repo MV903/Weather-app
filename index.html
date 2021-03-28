@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/2215f0e00c.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>week5 homework</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="app">
+        <form id="search-form">
+          <input class="search" 
+            autocomplete="off" 
+            type="text" 
+            placeholder="Search city" 
+            id="input-city"/>
+          <input class="btn btn-primary" type="submit" value="Search">
+          <a href="#" class="btn btn-primary" id="button-location">Current location</a>
+        </form>
+        <div class="row">
+          <div class="col-4 temp">
+            <h1>
+                <span id="temperature">7</span>
+                <span class="units"><a href="#" id="celsius">°C</a> |
+                <a href="#" id="fahrenheit">°F</a>
+                </span>
+            </h1>
+        </div>
+        <div class="col-4 specs">
+        <p id="display-humidity">Humidity: 40%</p>
+        <p id="display-wind">Wind speed: 10</p>
+        </div>
+        <div class="col-4 city">
+          <h2 id="new-city">Bergen</h2>
+          <p id ="display-time"></p>
+          <p id="display-weather-description">Clouds</p>
+
+        </p>
+        </div>
+      </div>
+      <div class="row future">
+        <div class="col-2">
+          <p>
+            Mon
+            <br />
+            <i class="fas fa-sun"></i>
+            <br />
+            11°C
+         </p>
+       </div>
+        <div class="col-2">
+          <p>Tue
+          <br />
+          <i class="fas fa-sun"></i>
+          <br />
+          13°C
+          </p>
+        </div>
+      <div class="col-2">
+        <p>
+          Wed
+          <br />
+          <i class="fas fa-sun"></i>
+          <br />
+          12°C
+        </p>
+      </div>
+      <div class="col-2">
+        <p>
+          Thu
+          <br />
+          <i class="fas fa-cloud-sun"></i>
+          <br />
+          11°C
+        </p>
+      </div>
+      <div class="col-2">
+        <p>
+          Fri
+          <br />
+          <i class="fas fa-cloud-showers-heavy"></i>
+          <br />
+          4°C
+        </p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    </script>
+  </body>
+</html>
