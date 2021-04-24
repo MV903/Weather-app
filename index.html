@@ -11,7 +11,7 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="src/style.css" />
     <script
       src="https://kit.fontawesome.com/2215f0e00c.js"
       crossorigin="anonymous"
@@ -27,26 +27,63 @@
             type="text" 
             placeholder="Search city" 
             id="input-city"/>
-          <input class="btn btn-primary" type="submit" value="Search">
-          <a href="#" class="btn btn-primary" id="button-location">Current location</a>
+          <input class="top-button" type="submit" value="" >
+          <a href="#" class="top-button" id="button-location"></a>
         </form>
         <div class="row">
-          <div class="col-4 temp">
-            <h1>
-                <span id="temperature">7</span>
+          <div class="col-3 location">
+            <ul class="location-date">
+              <li id="new-city">
+                Bergen
+                
+              </li>
+              <li id ="display-time">
+                
+              </li>
+            </ul>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="weather-spec">
+              <i class="fas fa-tint"></i>
+              <br>
+              <p id="precipitation">
+                10mm
+              </p></div>
+              
+          </div>
+            <div class="col-6 temp">
+              <ul>
+              <p id="display-weather-description">Clouds</p>
+              <img class="weather-icon-today" src="src/images/cloudy-day-3.svg" alt="">
+                <p id="temperature">7
                 <span class="units"><a href="#" id="celsius">°C</a> |
-                <a href="#" id="fahrenheit">°F</a>
-                </span>
-            </h1>
-        </div>
-        <div class="col-4 specs">
-        <p id="display-humidity">Humidity: 40%</p>
-        <p id="display-wind">Wind speed: 10</p>
-        </div>
-        <div class="col-4 city">
-          <h2 id="new-city">Bergen</h2>
-          <p id ="display-time"></p>
-          <p id="display-weather-description">Clouds</p>
+                  <a href="#" id="fahrenheit">°F</a>
+                </span></p>
+            </div>
+            
+            
+            
+            <div class="col-3 date">
+                <ul class="location-date">
+                <li id ="display-today"></li>
+                <li>
+                  18 April
+                </li>
+          </ul>
+          <br>
+          <br>
+          <br>
+          <br>
+          <div class="weather-spec">
+            <i class="fas fa-wind"></i>
+            <br>
+          <p id="wind">10 m/s</p></div>
+
+          
+
+
 
         </p>
         </div>
@@ -56,7 +93,7 @@
           <p>
             Mon
             <br />
-            <i class="fas fa-sun"></i>
+            <img class="weather-icon-future" src="src/images/cloudy-day-3.svg" alt="">
             <br />
             11°C
          </p>
@@ -64,7 +101,7 @@
         <div class="col-2">
           <p>Tue
           <br />
-          <i class="fas fa-sun"></i>
+          <img class="weather-icon-future" src="src/images/cloudy-day-3.svg" alt="">
           <br />
           13°C
           </p>
@@ -73,7 +110,7 @@
         <p>
           Wed
           <br />
-          <i class="fas fa-sun"></i>
+          <img class="weather-icon-future" src="src/images/cloudy-day-3.svg" alt="">
           <br />
           12°C
         </p>
@@ -82,7 +119,7 @@
         <p>
           Thu
           <br />
-          <i class="fas fa-cloud-sun"></i>
+          <img class="weather-icon-future" src="src/images/cloudy-day-3.svg" alt="">
           <br />
           11°C
         </p>
@@ -91,14 +128,17 @@
         <p>
           Fri
           <br />
-          <i class="fas fa-cloud-showers-heavy"></i>
+          <img class="weather-icon-future" src="src/images/cloudy-day-3.svg" alt="">
           <br />
           4°C
         </p>
       </div>
     </div>
+  </div>
+    </div>
     <h3><a href="https://github.com/MV903/weather-app" target="_blank">Open-source code by MV</a></h3>
-    <script src="script.js"></script>
+    
+        <script src="src/script.js"></script>
     </script>
   </body>
 </html>

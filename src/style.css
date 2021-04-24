@@ -6,36 +6,52 @@
   width: 50%;
   background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
-.app {
-  padding: 10px 40px;
-}
 .search {
   margin: 30px;
   width: 50%;
 }
-.btn-primary {
+.top-button {
   background-color: #ffff;
   color: #000;
   border-color: #000;
+  font-family: FontAwesome;
 }
-.btn-primary:hover {
+.top-button:hover {
   background-color: rgb(255, 236, 199);
   color: #000;
   border-color: #000;
 }
 .temp {
+  text-align: center;
+}
+.date {
   text-align: right;
 }
-.specs {
-  text-align: left;
+.weather-icon-today {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0px;
 }
-.city {
-  text-align: right;
+.weather-icon-future {
+  width: 100px;
+}
+li {
+  list-style-type: none;
 }
 .col-2 {
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
-  margin: 10px;
+  margin: 0 10px 0 10px;
+}
+.future {
+  text-align: center;
+}
+.location-date {
+  font-size: 20px;
+  margin-right: 25px;
+}
+.weather-spec {
+  text-align: center;
 }
 .fas {
   font-size: 40px;
