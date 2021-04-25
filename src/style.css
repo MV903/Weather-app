@@ -20,12 +20,12 @@
   border-color: #000;
 }
 .weather-icon-today {
-  width: 280px;
+  width: 30%;
   margin: 0 auto;
   padding: 0px;
 }
 .weather-icon-future {
-  width: 100px;
+  width: 50%;
 }
 li {
   list-style-type: none;
@@ -44,8 +44,9 @@ ul {
 .weather-spec {
   text-align: center;
 }
-.fas {
-  font-size: 40px;
+.rain-and-wind {
+  width: 30%;
+  
 }
 .units {
   font-size: 15px;
