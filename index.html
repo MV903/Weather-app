@@ -16,79 +16,59 @@
       src="https://kit.fontawesome.com/2215f0e00c.js"
       crossorigin="anonymous"
     ></script>
-    <title>Weather App</title>
+    <title>Weather forecast</title>
   </head>
   <body>
     <div class="container">
-      <div class="app">
+      <div class="weather-app">
         <form id="search-form">
           <input class="search" 
             autocomplete="off" 
             type="text" 
             placeholder="Search city" 
             id="input-city"/>
-          <input class="top-button" type="submit" value="" >
-          <a href="#" class="top-button" id="button-location"></a>
-        </form>
-        <div class="row">
-          <div class="col-3 location">
-            <ul class="location-date">
-              <li id="new-city">
-                Bergen
-                
+            <input class="top-button" type="submit" value="" >
+            <a href="#" class="top-button" id="button-location"></a>
+            <span id ="display-time"></span>
+          </form>
+          
+          <div class="row current-weather">
+            <div class="col-8 location">
+              <ul>
+                <li id="new-city">
+                  Reykjarvik
+                </li>
+                <li>
+                  Today
+                </li>
+              </ul>
+              <div id="weather-today">
+                  <img class="weather-icon-today" src="src/images/cloudy-day-3.svg" alt="">
+                  <span id="temperature">7</span>
+                    <span class="units">
+                      <a href="#" id="celsius">°C</a> |
+                      <a href="#" id="fahrenheit">°F</a>
+                  </span>
+                </div>
+          </div>
+          <div class="col-4 weather-spec">
+            <ul>
+              <li>
+                 <p id="display-weather-description">Clouds</p>
               </li>
-              <li id ="display-time">
-                
+              <li>
+               <i class="fas fa-tint"></i>
+                <span id="precipitation">10%</span>
+              </li>
+              <li>
+                <i class="fas fa-wind"></i>
+                <span id="wind">10 m/s<span>
               </li>
             </ul>
-            <br>
-            <br>
-            <br>
-            <br>
-            <div class="weather-spec">
-              <i class="fas fa-tint"></i>
-              <br>
-              <p id="precipitation">
-                10mm
-              </p></div>
-              
-          </div>
-            <div class="col-6 temp">
-              <ul>
-              <p id="display-weather-description">Clouds</p>
-              <img class="weather-icon-today" src="src/images/cloudy-day-3.svg" alt="">
-                <p id="temperature">7
-                <span class="units"><a href="#" id="celsius">°C</a> |
-                  <a href="#" id="fahrenheit">°F</a>
-                </span></p>
-            </div>
-            
-            
-            
-            <div class="col-3 date">
-                <ul class="location-date">
-                <li id ="display-today"></li>
-                <li>
-                  18 April
-                </li>
-          </ul>
-          <br>
-          <br>
-          <br>
-          <br>
-          <div class="weather-spec">
-            <i class="fas fa-wind"></i>
-            <br>
-          <p id="wind">10 m/s</p></div>
-
-          
-
-
-
-        </p>
         </div>
-      </div>
-      <div class="row future">
+
+
+      <div class="row forecast">
         <div class="col-2">
           <p>
             Mon
@@ -96,23 +76,23 @@
             <img class="weather-icon-future" src="src/images/cloudy-day-3.svg" alt="">
             <br />
             11°C
-         </p>
+          </p>
        </div>
-        <div class="col-2">
-          <p>Tue
-          <br />
-          <img class="weather-icon-future" src="src/images/cloudy-day-3.svg" alt="">
-          <br />
-          13°C
+       <div class="col-2">
+         <p>Tue
+           <br />
+           <img class="weather-icon-future" src="src/images/cloudy-day-3.svg" alt="">
+           <br />
+           13°C
           </p>
         </div>
-      <div class="col-2">
-        <p>
-          Wed
-          <br />
-          <img class="weather-icon-future" src="src/images/cloudy-day-3.svg" alt="">
-          <br />
-          12°C
+        <div class="col-2">
+          <p>
+            Wed
+            <br />
+            <img class="weather-icon-future" src="src/images/cloudy-day-3.svg" alt="">
+            <br />
+            12°C
         </p>
       </div>
       <div class="col-2">
@@ -135,6 +115,7 @@
       </div>
     </div>
   </div>
+    </div>
     </div>
     <h3><a href="https://github.com/MV903/weather-app" target="_blank">Open-source code by MV</a></h3>
     

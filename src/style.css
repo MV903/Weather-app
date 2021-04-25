@@ -11,21 +11,13 @@
   width: 50%;
 }
 .top-button {
-  background-color: #ffff;
   color: #000;
   border-color: #000;
   font-family: FontAwesome;
 }
 .top-button:hover {
-  background-color: rgb(255, 236, 199);
-  color: #000;
+  color: rgb(255, 255, 255);
   border-color: #000;
-}
-.temp {
-  text-align: center;
-}
-.date {
-  text-align: right;
 }
 .weather-icon-today {
   width: 280px;
@@ -43,11 +35,10 @@ li {
   text-align: center;
   margin: 0 10px 0 10px;
 }
-.future {
+.forecast {
   text-align: center;
 }
-.location-date {
-  font-size: 20px;
+ul {
   margin-right: 25px;
 }
 .weather-spec {
@@ -59,7 +50,7 @@ li {
 .units {
   font-size: 15px;
 }
-a:link {
+a {
   font-size: 15px;
   text-decoration: none;
 }
@@ -72,7 +63,4 @@ h1 p {
 h3 {
   color: #000;
   text-decoration: none;
-}
-h3:hover {
-  text-decoration: underline;
 }
