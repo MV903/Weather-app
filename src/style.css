@@ -1,39 +1,54 @@
+body {
+}
 .container {
-  display: block;
   margin: 40px auto;
-  border: 1px solid;
-  border-radius: 4px;
-  width: 50%;
+  border: 1px solid;  
+  border-radius: 16px;
+  width: 40%;
   background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+.weather-app {
+  padding: 0 0 30px 0;
 }
 .search {
   margin: 30px;
-  width: 50%;
+  width: 70%;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 4px;
 }
 .top-button {
+  font-size: 25px;
   color: #000;
-  border-color: #000;
   font-family: FontAwesome;
+  border: none;
+  background-color: transparent;
 }
 .top-button:hover {
   color: rgb(255, 255, 255);
-  border-color: #000;
+  transition: 300ms fade-in;
+}
+.current-weather {
+  margin-bottom: 15px;
 }
 .weather-icon-today {
-  width: 30%;
-  margin: 0 auto;
-  padding: 0px;
-}
+  width: 20%;
+  margin: 0 0 0 10px;
+} 
 .weather-icon-future {
-  width: 50%;
+  width: 70%;
 }
 li {
   list-style-type: none;
 }
-.col-2 {
-  font-size: 18px;
+#temperature {
+  font-size: 50px;
   text-align: center;
-  margin: 0 10px 0 10px;
+}
+.col-2 {
+  font-size: 15px;
+  text-align: center;
+  margin: 0 8px 0 8px;
 }
 .forecast {
   text-align: center;
@@ -42,10 +57,10 @@ ul {
   margin-right: 25px;
 }
 .weather-spec {
-  text-align: center;
+  text-align: left;
 }
 .rain-and-wind {
-  width: 30%;
+  width: 40px;
   
 }
 .units {
@@ -56,7 +71,8 @@ a {
   text-decoration: none;
 }
 h1 {
-  font-size: 60px;
+  font-size: 40px;
+  margin-left: 28px;
 }
 h1 p {
   font-size: 15px;

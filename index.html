@@ -25,23 +25,22 @@
           <input class="search" 
             autocomplete="off" 
             type="text" 
-            placeholder="Search city" 
+            placeholder="   Search city" 
             id="input-city"/>
             <input class="top-button" type="submit" value="" />
             <a href="#" class="top-button" id="button-location"></a>
-            <span id ="display-time"></span>
           </form>
           
           <div class="row current-weather">
-            <div class="col-8 location">
-              <ul>
-                <li id="new-city">
-                  Reykjarvik
-                </li>
-                <li>
-                  Today
-                </li>
-              </ul>
+                <h1 id="new-city">
+                  Reykjarvik</h1>
+          <div class="col-8 text">
+            <ul>
+              <li id ="display-time">
+              </li>
+              <li id="display-weather-description">Clear
+              </li>
+            </ul>
               <div id="weather-today">
                   <img class="weather-icon-today" src="src/images/clear-day.svg" alt="">
                   <span id="temperature">7</span>
@@ -50,12 +49,9 @@
                       <a href="#" id="fahrenheit">°F</a>
                   </span>
                 </div>
-          </div>
+            </div>
           <div class="col-4 weather-spec">
             <ul>
-              <li>
-                 <p id="display-weather-description">Clouds</p>
-              </li>
               <li>
                <img class="rain-and-wind" src="src/images/raindrop.svg" alt="">
                 <span id="precipitation">10%</span>
@@ -66,53 +62,40 @@
               </li>
             </ul>
         </div>
+      </div>
 
 
       <div class="row forecast">
         <div class="col-2">
-          <p>
-            Mon
-            <br />
-            <img class="weather-icon-future" src="src/images/clear-day.svg" alt="">
-            <br />
-            11°C
-          </p>
-       </div>
-       <div class="col-2">
-         <p>Tue
-           <br />
-           <img class="weather-icon-future" src="src/images/clear-day.svg" alt="">
-           <br />
-           13°C
-          </p>
+          <div class="future-day">Mon</div>
+          <img class="weather-icon-future" src="src/images/clear-day.svg" alt="">
+          <div class="future-high-temp">11°C</div>
+          <div class="future-low-temp">6°C</div>
         </div>
         <div class="col-2">
-          <p>
-            Wed
-            <br />
-            <img class="weather-icon-future" src="src/images/clear-day.svg" alt="">
-            <br />
-            12°C
-        </p>
-      </div>
-      <div class="col-2">
-        <p>
-          Thu
-          <br />
+          <div class="future-day">Tue</div>
           <img class="weather-icon-future" src="src/images/clear-day.svg" alt="">
-          <br />
-          11°C
-        </p>
-      </div>
-      <div class="col-2">
-        <p>
-          Fri
-          <br />
+          <div class="future-high-temp">11°C</div>
+          <div class="future-low-temp">6°C</div>
+        </div>
+        <div class="col-2">
+          <div class="future-day">Wed</div>
           <img class="weather-icon-future" src="src/images/clear-day.svg" alt="">
-          <br />
-          4°C
-        </p>
-      </div>
+          <div class="future-high-temp">11°C</div>
+          <div class="future-low-temp">6°C</div>
+        </div>
+        <div class="col-2">
+          <div class="future-day">Thu</div>
+          <img class="weather-icon-future" src="src/images/clear-day.svg" alt="">
+          <div class="future-high-temp">11°C</div>
+          <div class="future-low-temp">6°C</div>
+        </div>
+        <div class="col-2">
+          <div class="future-day">Fri</div>
+          <img class="weather-icon-future" src="src/images/clear-day.svg" alt="">
+          <div class="future-high-temp">11°C</div>
+          <div class="future-low-temp">6°C</div>
+        </div>
     </div>
   </div>
     </div>
