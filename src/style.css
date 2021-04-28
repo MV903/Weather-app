@@ -30,8 +30,8 @@
 .current-weather {
   margin-bottom: 15px;
 }
-.weather-icon-today {
-  width: 20%;
+#weather-icon-today {
+  width: 40%;
   margin: 0 0 0 10px;
 } 
 .weather-icon-future {
