@@ -18,10 +18,13 @@ function currentTime() {
 currentTime();
 
 function displayWeather(response) {
+  console.log(response);
   let temp = Math.round(response.data.main.temp);
   let wind = Math.round(response.data.wind.speed);
   let tempFeels = Math.round(response.data.main.feels_like)
   let description = response.data.weather[0].description;
+  let weatherIcon = response.data.weather[0].icon;
+  let showWeatherIcon = document.querySelector("#weather-icon-today");
   let showTemp = document.querySelector("#temperature");
   let showWind = document.querySelector("#wind");
   let showTempFeels = document.querySelector("#feels-like-temp")
@@ -30,6 +33,7 @@ function displayWeather(response) {
   showWind.innerHTML = `${wind} m/s`
   showTempFeels.innerHTML = tempFeels;
   showDescription.innerHTML = description;
+  showWeatherIcon.setAttribute("src", `src/images/${weatherIcon}.svg`);
   document.querySelector("#new-city").innerHTML = response.data.name;
 }
 
