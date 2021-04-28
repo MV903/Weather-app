@@ -44,6 +44,9 @@ li {
   font-size: 50px;
   text-align: center;
 }
+#new-city {
+  text-transform: capitalize;
+}
 .col-2 {
   font-size: 15px;
   text-align: center;
@@ -60,7 +63,6 @@ ul {
 }
 .rain-and-wind {
   width: 40px;
-  background-color: transparent;
   
 }
 .units {
