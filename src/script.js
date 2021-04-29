@@ -18,7 +18,7 @@ function currentTime() {
 currentTime();
 
 function displayWeather(response) {
-  console.log(response);
+  console.log(response)
   let temp = Math.round(response.data.main.temp);
   let wind = Math.round(response.data.wind.speed);
   let tempFeels = Math.round(response.data.main.feels_like)

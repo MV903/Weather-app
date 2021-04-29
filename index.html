@@ -16,7 +16,7 @@
       src="https://kit.fontawesome.com/2215f0e00c.js"
       crossorigin="anonymous"
     ></script>
-    <title>Weather forecast</title>
+    <title>Weather</title>
   </head>
   <body>
     <div class="container">
@@ -25,7 +25,7 @@
           <input class="search" 
             autocomplete="off" 
             type="text" 
-            placeholder="   Search city" 
+            placeholder="  Search city" 
             id="input-city"/>
             <input class="top-button" type="submit" value="" />
             <a href="#" class="top-button" id="button-location"></a>
@@ -36,24 +36,24 @@
                   new york</h1>
           <div class="col-8 text">
             <ul>
-              <li id ="display-time">
+              <li id ="display-time">Today
               </li>
-              <li id="display-weather-description" class="capitalize">Clear
+              <li id="display-weather-description" class="capitalize">Clear Sky
               </li>
             </ul>
-              <div id="weather-today">
-                  <img id="weather-icon-today" src="src/images/01d.svg" alt="">
-                  <span id="temperature">7</span>
-                    <span class="units">
-                      <a href="#" id="celsius">°C</a> |
-                      <a href="#" id="fahrenheit">°F</a>
-                  </span>
-                </div>
+            <div id="weather-today">
+              <img id="weather-icon-today" src="src/images/01d.svg" alt="">
+              <span id="temperature">7</span>
+              <span class="units">
+                <a href="#" id="celsius">°C</a> |
+                <a href="#" id="fahrenheit">°F</a>
+              </span>
             </div>
+          </div>
           <div class="col-4 weather-spec">
             <ul>
               <li>
-                <p>Feels like <span id="feels-like-temp">5</span>°C
+                <p>Feels like <span id="feels-like-temp">5</span>°
                 </p>
               </li>
               <li>
@@ -67,42 +67,40 @@
 
       <div class="row forecast">
         <div class="col-2">
-          <div class="future-day">Mon</div>
-          <img class="weather-icon-future" src="src/images/01d.svg" alt="">
-          <div class="future-high-temp">11°C</div>
-          <div class="future-low-temp">6°C</div>
+          <div class="forecast-day">Mon</div>
+          <img class="forecast-weather-icon" src="src/images/01d.svg" alt="">
+          <div class="forecast-hi-temp">11°</div>
+          <div class="forecast-lo-temp">6°</div>
         </div>
         <div class="col-2">
-          <div class="future-day">Tue</div>
-          <img class="weather-icon-future" src="src/images/01d.svg" alt="">
-          <div class="future-high-temp">11°C</div>
-          <div class="future-low-temp">6°C</div>
+          <div class="forecast-day">Tue</div>
+          <img class="forecast-weather-icon" src="src/images/01d.svg" alt="">
+          <div class="forecast-hi-temp">11°</div>
+          <div class="forecast-lo-temp">6°</div>
         </div>
         <div class="col-2">
-          <div class="future-day">Wed</div>
-          <img class="weather-icon-future" src="src/images/01d.svg" alt="">
-          <div class="future-high-temp">11°C</div>
-          <div class="future-low-temp">6°C</div>
+          <div class="forecast-day">Wed</div>
+          <img class="forecast-weather-icon" src="src/images/01d.svg" alt="">
+          <div class="forecast-hi-temp">11°</div>
+          <div class="forecast-lo-temp">6°</div>
         </div>
         <div class="col-2">
-          <div class="future-day">Thu</div>
-          <img class="weather-icon-future" src="src/images/01d.svg" alt="">
-          <div class="future-high-temp">11°C</div>
-          <div class="future-low-temp">6°C</div>
+          <div class="forecast-day">Thu</div>
+          <img class="forecast-weather-icon" src="src/images/01d.svg" alt="">
+          <div class="forecast-hi-temp">11°</div>
+          <div class="forecast-lo-temp">6°</div>
         </div>
         <div class="col-2">
-          <div class="future-day">Fri</div>
-          <img class="weather-icon-future" src="src/images/01d.svg" alt="">
-          <div class="future-high-temp">11°C</div>
-          <div class="future-low-temp">6°C</div>
+          <div class="forecast-day">Fri</div>
+          <img class="forecast-weather-icon" src="src/images/01d.svg" alt="">
+          <div class="forecast-hi-temp">11°</div>
+          <div class="forecast-lo-temp">6°</div>
         </div>
     </div>
   </div>
-    </div>
-    </div>
-    <h3><a href="https://github.com/MV903/weather-app" target="_blank" id="code">Open-source code by MV</a></h3>
-    
+</div>
+</div>
+  <h3><a href="https://github.com/MV903/weather-app" target="_blank" id="code">Open-source code by MV</a></h3>
         <script src="src/script.js"></script>
-    </script>
   </body>
 </html>
