@@ -1,11 +1,11 @@
 
-let now = new Date();
-function currentTime() {
-  let currentHour = now.getHours();
-  let currentMinute = now.getMinutes();
-  document.querySelector("#display-time").innerHTML = `Today ${currentHour}:${currentMinute}`;
-}
-currentTime();
+// let now = new Date();
+// function currentTime() {
+//   let currentHour = now.getHours();
+//   let currentMinute = now.getMinutes();
+//   document.querySelector("#display-time").innerHTML = `Today ${currentHour}:${currentMinute}`;
+// }
+// currentTime();
 
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
@@ -39,6 +39,20 @@ function displayWeather(response) {
   document.querySelector("#feels-like-temp").innerHTML = tempFeels;
   document.querySelector("#display-weather-description").innerHTML = description;
   document.querySelector("#new-city").innerHTML = response.data.name;
+  {
+    function showTime(response) {
+    let unix = response.data.dt;
+    let timezone = response.data.timezone;
+    let unixMS = unix * 1000
+    let timezoneAdjust = timezone - 3600
+    let timezoneMS = timezoneAdjust * 1000
+    let localTime = unixMS + timezoneMS;
+    let timeObject = new Date(localTime);
+    let hour = timeObject.toLocaleString("en-GB", {hour: "numeric"});
+    let minute = timeObject.toLocaleString("en-US", {minute: "numeric"});
+    document.querySelector("#display-time").innerHTML = `${hour}:${minute}`;
+    }
+    return showTime(response)}
 }
 
 function searchCity(event) {
