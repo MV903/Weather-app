@@ -16,8 +16,8 @@ function displayForecast() {
   <div class="col-2">
   <div class="forecast-day">${day}</div>
   <img class="forecast-weather-icon" src="src/images/01d.svg" alt="">
-  <div class="forecast-hi-temp">11°</div>
-  <div class="forecast-lo-temp">6°</div>
+  <div class="forecast-hi-temp">11°C</div>
+  <div class="forecast-lo-temp">6°C</div>
   </div>
   `;});
   forecastHTML = forecastHTML + `</div>`;
