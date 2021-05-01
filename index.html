@@ -28,7 +28,7 @@
             placeholder="  Search city" 
             id="input-city"/>
             <input class="top-button" type="submit" value="" />
-            <a href="#" class="top-button" id="button-location"></a>
+            <button class="top-button" id="current-location"></button>
           </form>
           
           <div class="row current-weather">
@@ -44,19 +44,17 @@
             <div id="weather-today">
               <img id="weather-icon-today" src="src/images/01d.svg" alt="">
               <span id="temperature">7</span>°C
-              <span class="units">
-              </span>
             </div>
           </div>
           <div class="col-4 weather-spec">
             <ul>
               <li>
-                <p>Feels like <span id="feels-like-temp">5</span>°
+                <p>Feels like <span id="feels-like-temp">5</span>°C
                 </p>
               </li>
               <li>
                 <img class="rain-and-wind" src="src/images/windsock.svg" alt="">
-                <span id="wind">5 m/s<span>
+                <span id="wind">5</span> m/s
               </li>
             </ul>
         </div>
@@ -68,7 +66,7 @@
   </div>
 </div>
 </div>
-  <h3><a href="https://github.com/MV903/weather-app" target="_blank" id="code">Open-source code by MV</a></h3>
+  <a href="https://github.com/MV903/weather-app" target="_blank" id="code">Open-source code by MV</a>
         <script src="src/script.js"></script>
   </body>
 </html>
