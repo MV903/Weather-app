@@ -1,5 +1,5 @@
 let now = new Date();
-function currentTime() {
+function currentTime(response) {
   let days = [
     "Sunday",
     "Monday",
@@ -9,13 +9,31 @@ function currentTime() {
     "Friday",
     "Saturday",
   ];
-  let day = days[now.getDay()];
   let currentHour = now.getHours();
   let currentMinute = now.getMinutes();
   let showTime = document.querySelector("#display-time");
   showTime.innerHTML = `Today ${currentHour}:${currentMinute}`;
 }
 currentTime();
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML =`<div class="row">`;
+  let days =["Mon", "Tue", "Wed", "Thu", "Fri"];
+days.forEach(function(day) {
+  forecastHTML = forecastHTML + `
+  <div class="col-2">
+          <div class="forecast-day">${day}</div>
+          <img class="forecast-weather-icon" src="src/images/01d.svg" alt="">
+          <div class="forecast-hi-temp">11°</div>
+          <div class="forecast-lo-temp">6°</div>
+        </div>
+  `;});
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+
+}
+displayForecast();
 
 function displayWeather(response) {
   console.log(response)
