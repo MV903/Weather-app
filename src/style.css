@@ -9,6 +9,7 @@
 }
 .weather-app {
   padding: 0 0 30px 0;
+  font-family: 'Open Sans', sans-serif;
 }
 .search {
   margin: 25px;
@@ -48,8 +49,8 @@ li {
   font-size: 50px;
   text-align: center;
 }
-.units {
-  font-size: 15px;
+.lo-temp {
+  color: #555555;
 }
 .capitalize {
   text-transform: capitalize;
@@ -57,7 +58,7 @@ li {
 .weather-spec {
   text-align: left;
 }
-.rain-and-wind {
+.weather-spec-icons {
   width: 40px;
 }
 .forecast {

@@ -11,6 +11,7 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
+    
     <link rel="stylesheet" href="src/style.css" />
     <script
       src="https://kit.fontawesome.com/2215f0e00c.js"
@@ -49,11 +50,15 @@
           <div class="col-4 weather-spec">
             <ul>
               <li>
-                <p>Feels like <span id="feels-like-temp">5</span>°C
-                </p>
+                <img class="weather-spec-icons" src="src/images/thermometer.svg" alt="">
+                <span id="feels-like-temp">5</span>°C
               </li>
               <li>
-                <img class="rain-and-wind" src="src/images/windsock.svg" alt="">
+                <img src="src/images/raindrop.svg" alt="" class="weather-spec-icons">
+                <span id="pop">10</span>%
+              </li>
+              <li>
+                <img class="weather-spec-icons" src="src/images/windsock.svg" alt="">
                 <span id="wind">5</span> m/s
               </li>
             </ul>
