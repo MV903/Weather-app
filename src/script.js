@@ -1,12 +1,3 @@
-
-// let now = new Date();
-// function currentTime() {
-//   let currentHour = now.getHours();
-//   let currentMinute = now.getMinutes();
-//   document.querySelector("#display-time").innerHTML = `Today ${currentHour}:${currentMinute}`;
-// }
-// currentTime();
-
 function convertDay(unix) {
   let date = new Date(unix * 1000);
   let day = date.getDay();
@@ -32,24 +23,27 @@ forecast.forEach(function(forecastDay, index) {
   forecastElement.innerHTML = forecastHTML;
 }
 
+
 function displayTime(response) {
-let unix = response.data.dt;
-let timezone = response.data.timezone;
-let unixMS = unix * 1000
-let timezoneAdjust = timezone - 3600
-let timezoneMS = timezoneAdjust * 1000
+let unixMS = response.data.dt * 1000
+let timezoneMS = response.data.timezone - 3600
+timezoneMS = timezoneMS * 1000
 let localTime = unixMS + timezoneMS;
 let timeObject = new Date(localTime);
-let hour = timeObject.toLocaleString("en-GB", {hour: "numeric"});
-let minute = timeObject.toLocaleString("en-US", {minute: "numeric"});
+let hour = timeObject.getHours();
+if (hour < 10) {
+  hour = `0${hour}`;
+}
+let minute = timeObject.getMinutes();
+if (minute < 10) {
+  minute = `0${minute}`;
+}
 document.querySelector("#display-time").innerHTML = `${hour}:${minute}`;
 }
 
-
-
 function getCoordinations(coord) {
   let apiKey = "de31873c66b8933cfbbc1e0df416d91d";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coord.lat}&lon=${coord.lon}&exclude=current,minutely,houly,alert&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coord.lat}&lon=${coord.lon}&exclude=current,minutely,hourly,alerts&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -70,7 +64,6 @@ function displayWeather(response) {
   displayTime(response);
 }
 
-
 function searchCity(event) {
   event.preventDefault();
   let city = document.querySelector("#input-city");
@@ -87,12 +80,13 @@ function showCurrentLocation(position) {
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
   axios.get(url).then(displayWeather);
 }
+
 function geolocation() {
   navigator.geolocation.getCurrentPosition(showCurrentLocation);
 }
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchCity);
 
 let locationButton = document.querySelector("#current-location");
 locationButton.addEventListener("click", geolocation);
-
