@@ -68,12 +68,19 @@ function displayCurrentWeather(response) {
 function searchCity(event) {
   event.preventDefault();
   let city = document.querySelector("#input-city");
-  document.querySelector("#new-city").innerHTML = `${city.value}`;
+  document.querySelector("#new-city").innerHTML = city.value;
   let apiKey = "de31873c66b8933cfbbc1e0df416d91d";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayCurrentWeather);
 }
 
+function defaultCity() {
+  let city = "London";
+  document.querySelector("#new-city").innerHTML = city;
+  let apiKey = "de31873c66b8933cfbbc1e0df416d91d";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayCurrentWeather);
+}
 function displayCurrentLocation(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
@@ -91,3 +98,7 @@ form.addEventListener("submit", searchCity);
 
 let locationButton = document.querySelector("#current-location");
 locationButton.addEventListener("click", geolocation);
+
+//function to show live data for London on page load
+//result: page load lags too much - trying to find a better way
+defaultCity();

@@ -61,6 +61,13 @@ li {
 .weather-spec-icons {
   width: 40px;
 }
+.spec-text:hover + .spec-text-hide{
+  display: inline;
+}
+.spec-text-hide {
+  display: none;
+}
+
 .forecast {
   text-align: center;
 }
