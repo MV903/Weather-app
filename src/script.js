@@ -21,8 +21,8 @@ forecast.forEach(function(forecastDay, index) {
   `};});
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
-  //using this API to get precipitation % for current weather
-  document.querySelector("#pop").innerHTML = response.data.hourly[0].pop * 100
+  //using this API to get precipitation for current weather
+  document.querySelector("#precipitation").innerHTML = response.data.hourly[0].pop * 100
 }
 
 function getCoordinations(coord) {
@@ -32,16 +32,14 @@ function getCoordinations(coord) {
 }
 
 function displayTime(response) {
-let unixMS = response.data.dt * 1000
-let timezoneMS = response.data.timezone - 3600
-timezoneMS = timezoneMS * 1000
-let localTime = unixMS + timezoneMS;
-let timeObject = new Date(localTime);
-let hour = timeObject.getHours();
+  let unixCorrect = (response.data.dt + response.data.timezone) - 3600 
+  let unix = unixCorrect * 1000
+  let localTime = new Date(unix);
+let hour = localTime.getHours();
 if (hour < 10) {
   hour = `0${hour}`;
 }
-let minute = timeObject.getMinutes();
+let minute = localTime.getMinutes();
 if (minute < 10) {
   minute = `0${minute}`;
 }
@@ -65,22 +63,21 @@ function displayCurrentWeather(response) {
   displayTime(response);
 }
 
-function searchCity(event) {
-  event.preventDefault();
-  let city = document.querySelector("#input-city");
-  document.querySelector("#new-city").innerHTML = city.value;
-  let apiKey = "de31873c66b8933cfbbc1e0df416d91d";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayCurrentWeather);
-}
-
-function defaultCity() {
-  let city = "London";
-  document.querySelector("#new-city").innerHTML = city;
+function search(city) {
   let apiKey = "de31873c66b8933cfbbc1e0df416d91d";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayCurrentWeather);
 }
+function searchCity(event) {
+  event.preventDefault();
+  let city = document.querySelector("#input-city");
+  document.querySelector("#new-city").innerHTML = city.value;
+  search(city.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", searchCity);
+
 function displayCurrentLocation(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
@@ -93,12 +90,7 @@ function geolocation() {
   navigator.geolocation.getCurrentPosition(displayCurrentLocation);
 }
 
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", searchCity);
-
 let locationButton = document.querySelector("#current-location");
 locationButton.addEventListener("click", geolocation);
 
-//function to show live data for London on page load
-//result: page load lags too much - trying to find a better way
-defaultCity();
+search("London");
