@@ -94,3 +94,7 @@ let locationButton = document.querySelector("#current-location");
 locationButton.addEventListener("click", geolocation);
 
 search("London");
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
